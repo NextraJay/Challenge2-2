@@ -1,0 +1,162 @@
+html {
+  box-sizing: border-box;
+  font-size: 65.2%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url(../img/pattern-background-desktop.svg);
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: hsl(225, 100%, 94%);
+}
+
+/* globals */
+img {
+  display: block;
+  max-width: 100%;
+}
+p {
+  font-size: 1.2rem;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  width: 30rem;
+  box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 1.5rem;
+  background-color: #fff;
+}
+.card__img {
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.card__body {
+  margin: 3rem 3rem 1.5rem 3rem;
+}
+.card__title {
+  font-weight: 900;
+  font-size: 2rem;
+  color: hsl(223, 47%, 23%);
+}
+.card__paragraph {
+  color: hsl(224, 23%, 55%);
+  line-height: 2rem;
+}
+.card__title,
+.card__paragraph {
+  text-align: center;
+  margin: 2rem 0 1.5rem 0;
+}
+.card__content p,
+h2 {
+  margin: 0.5rem;
+  line-height: 1.4rem;
+}
+.card__content p {
+  color: hsl(224, 23%, 55%);
+}
+.card__content h2 {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: hsl(223, 47%, 23%);
+}
+.card__song {
+  display: grid;
+  grid-template-columns: 0.8fr 1.3fr 0.8fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 1rem;
+}
+.card__music {
+  width: 75%;
+  margin: auto 1.5rem;
+}
+.card__song a {
+  text-align: justify;
+  font-weight: 900;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+.card__song a:hover {
+  color: hsl(240, 100%, 70%);
+  text-decoration: none;
+}
+.card__footer {
+  padding: 0 3rem 3rem 3rem;
+}
+.card__btn {
+  background-color: hsl(245, 75%, 52%);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: block;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  box-shadow: 0rem 0.5rem 2rem 0.5rem rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+.card__btn:hover {
+  background-color: hsl(240, 100%, 70%);
+}
+.card__cancel {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: hsl(224, 23%, 55%);
+  font-weight: 900;
+  transition: color 0.2s ease;
+}
+.card__cancel--center {
+  margin-top: 2rem;
+  text-align: center;
+}
+.card__cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media (max-width: 375px) {
+  body {
+
+    background-image: url(../img/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .card {
+    width: 26rem;
+  }
+  .card__title {
+    font-size: 1.8rem;
+  }
+  .card__title,
+  .card__paragraph {
+    text-align: center;
+    margin: 1.5rem 0 1.5rem 0;
+  }
+  .card__paragraph {
+    font-size: 1.1rem;
+  }
+  .card__body {
+    margin: 2rem;
+  }
+  .card__content p {
+    font-size: 1.1rem;
+  }
+  .card__btn,
+  .card__cancel {
+    font-size: 1.1rem;
+  }
+  .card__btn {
+    box-shadow: 0rem 0.2rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
+  }
+}
